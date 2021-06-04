@@ -35,6 +35,7 @@ class OrderViewModel : ViewModel() {
         return _flavor.value.isNullOrEmpty()
     }
 
+    // 現実には出荷日は工場側と調整した値になるから、api(DB)から取得しないといけない
     private fun getPickupOptions(): List<String> {
         val options = mutableListOf<String>()
         val formatter = SimpleDateFormat("E MMM d", Locale.getDefault())
