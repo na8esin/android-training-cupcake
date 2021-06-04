@@ -48,6 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="@{viewModel.flavor.equals(@string/vanilla)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/vanilla)}"
                     android:text="@string/vanilla" />
 
                 <RadioButton
@@ -55,6 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="@{viewModel.flavor.equals(@string/chocolate)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/chocolate)}"
                     android:text="@string/chocolate" />
 
                 <RadioButton
@@ -62,6 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="@{viewModel.flavor.equals(@string/red_velvet)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/red_velvet)}"
                     android:text="@string/red_velvet" />
 
                 <RadioButton
@@ -69,6 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="@{viewModel.flavor.equals(@string/salted_caramel)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/salted_caramel)}"
                     android:text="@string/salted_caramel" />
 
                 <RadioButton
@@ -76,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="@{viewModel.flavor.equals(@string/coffee)}"
+                    android:onClick="@{() -> viewModel.setFlavor(@string/coffee)}"
                     android:text="@string/coffee" />
             </RadioGroup>
 
