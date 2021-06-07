@@ -14,6 +14,14 @@ class OrderViewModel : ViewModel() {
     val quantity: LiveData<Int> = _quantity
     fun setQuantity(numberCupcakes: Int) {
         _quantity.value = numberCupcakes
+        // このメソッドの役割範囲としてどうなんだろう？
+        // setQuantityAndUpdatePriceならわかりやすいけど。
+        // このタイミングでやらないとなるとgetのタイミングだけど、
+        // パフォーマンスを気にするような処理でもない
+        // ただこのクラスに閉じた問題なので、そこまで気にする必要もないとも言える。
+        // このクラスを使う人も、updatePriceが公開されてないから、
+        // どこかで、計算されているだろうということがわかるし。
+        updatePrice()
     }
 
     private val _flavor = MutableLiveData<String>()
